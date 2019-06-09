@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28917.182
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_AccessModifiers", "Console_AccessModifiers\Console_AccessModifiers.csproj", "{D42663EA-A2D5-4B1C-BC3D-DBE99C1F3E04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_AccessModifiers2", "Console_AccessModifiers2\Console_AccessModifiers2.csproj", "{932A10F6-A8C0-429A-84B2-471605F9A841}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D42663EA-A2D5-4B1C-BC3D-DBE99C1F3E04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D42663EA-A2D5-4B1C-BC3D-DBE99C1F3E04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D42663EA-A2D5-4B1C-BC3D-DBE99C1F3E04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{932A10F6-A8C0-429A-84B2-471605F9A841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932A10F6-A8C0-429A-84B2-471605F9A841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932A10F6-A8C0-429A-84B2-471605F9A841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932A10F6-A8C0-429A-84B2-471605F9A841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
