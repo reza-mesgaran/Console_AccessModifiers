@@ -14,24 +14,32 @@ namespace Console_AccessModifiers2
         {
         }
     }
-    public class AccessTestClass_B : VariablesClass
+    public class TestClass_NotAssembly__NotDerived
     {
-        VariablesClass v1 = new VariablesClass();
-
-        AccessTestClass_B b1 = new AccessTestClass_B();
 
         public void method()
         {
-            v1._Variable_public= "Accessible";  // Not Same assembly but Is another assembly
-            // v1._Variable_internal             Access denied !  Not Same Assembly
-            // v1._Variable_protected_internal   Access denied !  NOT Derived Class -OR- NOT Same Assembly 
-            // v1._Variable_private;             Access denied !  NOT Same Class
-            // v1._Variable_protected            Access denied !  NOT Derived Class 
-            // v1._Variable_private_protected;   Access denied !  Work only in Same Assemblies
-            
-            b1._Variable_public= "Accessible";     // Not Same assembly but Is another assembly
-            b1._Variable_protected = "Accessible"; // Is Drived Class (even parent is in another assembly)
-            b1._Variable_protected_internal= "Accessible"; // Not Same assembly (internal) -BUT- Drived Class (protected)        
+            VariablesClass._Variable_public = "Accessible";               // Accessible (Any Assembly / Any class)
+            VariablesClass._Variable_internal = "Accesible";              // current class isn't in same assembly
+            VariablesClass._Variable_protected = "Accessible";            // current class isn't a derived class
+            VariablesClass._Variable_protected_internal = "Accesible";    // current class isn't derived class OR current class NOT located in the same assembly
+            VariablesClass._Variable_private_protected = "Accesible";   // current class isn't owner class OR current class isn't a derived class
+            VariablesClass._Variable_private = "";                      // current class isn't owner class 
         }
     }
+
+    public class TestClass_NotAssembly__Derived:VariablesClass
+    {
+
+        public void method()
+        {
+            VariablesClass._Variable_public = "Accessible";               // Accessible (Any Assembly / Any class)
+            VariablesClass._Variable_protected = "Accessible";            // current class is a derived class
+            VariablesClass._Variable_protected_internal = "Accesible";    // current class is derived class Despite current class NOT located in the same assembly
+            VariablesClass._Variable_internal = "Accesible";              // current class isn't in same assembly
+            VariablesClass._Variable_private = "";                      // current class isn't owner class
+            VariablesClass._Variable_private_protected = "Accesible";   // current class isn't owner class OR current class isn't a derived class
+        }
+    }
+
 }
