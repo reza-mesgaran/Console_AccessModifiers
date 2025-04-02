@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-// Note : when we talk about Access Modifiers,We talk about access to members of class in the another Class
+﻿// Note : when we talk about Access Modifiers,We talk about access to members of class in the another Class
 
 namespace Console_AccessModifiers
 {
@@ -23,29 +18,29 @@ namespace Console_AccessModifiers
         }
     }
 
-    public class TestClass_SameAssembly_NotDerived 
+    public class TestClass_SameAssembly_NotDerived
     {
         public void method()
         {
-            VariablesClass._Variable_public = "Accessible";               // Accessible (Any Assembly / Any class)
-            VariablesClass._Variable_internal = "Accesible";              // current class is in same assembly
-            VariablesClass._Variable_protected_internal = "Accesible";    //current class isn't derived BUT current class located in the same assembly (one condition is enough)
-            VariablesClass._Variable_protected="Accessible";           // current class isn't derived class
-            VariablesClass._Variable_private = "";              // current class isn't owner class 
-           VariablesClass._Variable_private_protected = "Accesible";    
+            VariablesClass._Variable_public = "Accessible";              // Accessible (Any Assembly / Any class)
+            VariablesClass._Variable_internal = "Accesible";             // current class is in same assembly
+            VariablesClass._Variable_protected_internal = "Accesible";   // current class isn't derived BUT current class located in the same assembly (one condition is enough)
+            VariablesClass._Variable_protected = "Accessible";           // current class isn't derived class
+            VariablesClass._Variable_private = "";                       // current class isn't owner class 
+            VariablesClass._Variable_private_protected = "Accesible";
         }
     }
 
-    public class TestClass_SameAssembly_Derived :VariablesClass
+    public class TestClass_SameAssembly_Derived : VariablesClass
     {
         public void method()
         {
-            VariablesClass._Variable_public = "Accessible";               // Accessible (Any Assembly / Any class)
-            VariablesClass._Variable_internal = "Accesible";              // current class is in same assembly
-            VariablesClass._Variable_protected = "Accessible";            // current class is a derived class
-            VariablesClass._Variable_protected_internal = "Accesible";    // current class isn't derived class also current class located in the same assembly
-            VariablesClass._Variable_private_protected = "Accesible";   // current class isn't owner class BUT current class is a derived class
-            VariablesClass._Variable_private = "";                      // current class isn't owner class 
+            VariablesClass._Variable_public = "Accessible";              // Accessible (Any Assembly / Any class)
+            VariablesClass._Variable_internal = "Accesible";             // current class is in same assembly
+            VariablesClass._Variable_protected = "Accessible";           // current class is a derived class
+            VariablesClass._Variable_protected_internal = "Accesible";   // current class isn't derived class also current class located in the same assembly
+            VariablesClass._Variable_private_protected = "Accesible";    // current class isn't owner class BUT current class is a derived class
+            VariablesClass._Variable_private = "";                       // current class isn't owner class 
         }
     }
 

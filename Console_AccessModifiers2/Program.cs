@@ -1,9 +1,4 @@
 ﻿using Console_AccessModifiers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 
 namespace Console_AccessModifiers2
@@ -28,7 +23,7 @@ namespace Console_AccessModifiers2
         }
     }
 
-    public class TestClass_NotAssembly__Derived:VariablesClass
+    public class TestClass_NotAssembly__Derived : VariablesClass
     {
 
         public void method()
